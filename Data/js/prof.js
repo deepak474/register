@@ -69,11 +69,72 @@ $.getJSON('js/def.JSON',function(data){
 	}
 });	
 
+
 var $mcur = $('#curr');
 $.getJSON('js/def.JSON',function(data){
 	$mcur.html('');
 	
 	for(var h = 0; h < data['curr'].length; h++){
 		$mcur.append('<option id="'+data['curr'][h]['id']+ '">' + data['curr'][h]['name'] + '</option>');
+	}
+});	
+
+
+var $mweight = $('#myweight');
+$.getJSON('js/def.JSON',function(data){
+	$mweight.html('');
+	
+	for(var wt = 0; wt < data['myweight'].length; wt++){
+		$mweight.append('<option id="'+data['myweight'][wt]['id']+ '">' + data['myweight'][wt]['name'] + '</option>');
+	}
+});	
+
+
+var $mstar = $('#mystar');
+$.getJSON('js/def.JSON',function(data){
+	$mstar.html('');
+	
+	for(var st = 0; st < data['mystar'].length; st++){
+		$mstar.append('<option id="'+data['mystar'][st]['id']+ '">' + data['mystar'][st]['name'] + '</option>');
+	}
+});	
+
+
+var $mrasi = $('#myraasi');
+$.getJSON('js/def.JSON',function(data){
+	$mrasi.html('');
+	
+	for(var rs = 0; rs < data['myraasi'].length; rs++){
+		$mrasi.append('<option id="'+data['myraasi'][rs]['id']+ '">' + data['myraasi'][rs]['name'] + '</option>');
+	}
+});	
+
+
+var $mhour = $('#tbhour');
+$.getJSON('js/def.JSON',function(data){
+	$mhour.html('');
+	
+	for(var tbh = 0; tbh < data['tbhour'].length; tbh++){
+		$mhour.append('<option id="'+data['tbhour'][tbh]['id']+ '">' + data['tbhour'][tbh]['name'] + '</option>');
+	}
+});	
+
+
+var $mminu = $('#tbminute');
+$.getJSON('js/def.JSON',function(data){
+	$mminu.html('');
+	
+	for(var tbm = 0; tbm < data['tbminute'].length; tbm++){
+		$mminu.append('<option id="'+data['tbminute'][tbm]['id']+ '">' + data['tbminute'][tbm]['name'] + '</option>');
+	}
+});	
+
+
+var $mpmc = $('#PM_COUNTRYCODE');
+$.getJSON('js/def.JSON',function(data){
+	$mpmc.html('');
+	
+	for(var pmc = 0; pmc < data['PM_COUNTRYCODE'].length; pmc++){
+		$mpmc.append('<option id="'+data['PM_COUNTRYCODE'][pmc]['id']+ '">' + data['PM_COUNTRYCODE'][pmc]['name'] + '</option>');
 	}
 });	
