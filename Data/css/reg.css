@@ -86,9 +86,7 @@
     font-family:verdana;
     }
 	
-	select#country2,select#state2,select#city2,select#hour,select#minute,select#meridiem,div#hght,div.hght,div#ctmr,select#M_COUNTRYCODE,div#numr,
-	select#PM_COUNTRYCODE,div#pnumr,select#brthr,select#brthr2,select#sistr,select#sistr2,select#country3,select#state3,select#city3,
-	div#copr,div#colt,div.tpa{margin-top:7px;}
+	div.tpa{margin-top:7px;}
 	
 	div#profpic{
 	margin:10px auto;	
