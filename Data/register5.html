@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Telugu Matrimony</title>
+<meta charset="utf-8" >
+<meta name="description" content="best telugu matrimony site">
+<meta name="keywords" content="marriage,telugu,matrimony,weddings">
+<meta name="author" content="T,S">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="refresh" content="60">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="img/wed_logo.png" type="image/png" >
+<link rel="stylesheet" href="css/reg.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-toggle">
+        <span class="decor"><i class="glyphicon glyphicon-hand-down"></i>&nbsp;Partner Preferences</span>                        
+      </div>
+      <a class="navbar-brand" href="#"><img class="img-responsive" src="img/wed_logo.png" alt="matrimony_logo" width="147" height="125"></a>
+    </div>
+    <div class="collapse navbar-collapse">      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="decor"><i class="glyphicon glyphicon-hand-down"></i>&nbsp;Partner Preferences</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" id="main"> 
+<div class="container col-sm-offset-2 col-sm-8">    
+    <form class="form-horizontal" id="contactForm" action="/action_page.php">
+	<div class="input-group">
+	   <span class="input-group-addon" id="rel"><i class="glyphicon glyphicon-user"></i></span>
+	   <h4>&nbsp;Partner preferences:</h4> 
+	</div>
+	<hr>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="age">Age:</label>
+	  <div class="col-sm-3 tpa">
+      <select name="min_age" class="form-control" id="age">
+        <option value="0">-select-</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>	  
+	  </div>
+	  <div class="col-sm-1 text-center tpa"><span>to</span></div>
+	  <div class="col-sm-3 tpa">
+      <select name="max_age" class="form-control" id="age2">
+        <option value="0">-select-</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>	  
+	  </div>
+	  <div class="col-sm-2 tpa"><span>Years</span></div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="HFeet">Height:</label>      
+	    <div class="col-sm-4">
+		<div class="input-group hght">
+           <input type="number" class="form-control" id="HFeet" placeholder="Feet" step="0.1" min="4" max="8" name="feet" autocomplete="off" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)" value="">
+           <span class="input-group-addon">ft</span>
+        </div>		   
+		</div>
+		<div class="col-sm-1 text-center tpa"><span>to</span></div>
+		<div class="col-sm-4">
+		<div class="input-group hght">
+           <input type="number" class="form-control" id="HFeet2" placeholder="Feet" step="0.1" min="4" max="8" name="feet" autocomplete="off" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)" value="">
+           <span class="input-group-addon">ft</span>
+        </div>		   
+		</div>
+     </div>
+	 <div class="form-group">
+      <label class="control-label col-sm-3" for="mas">Marital Status:</label>
+	  <div class="col-sm-9 checkbox">
+	     <label class="col-sm-2">
+            <input type="checkbox" name="marital_status" id="mas" value="all" onclick="marStatus()" onchange="marStat()">All
+         </label>
+         <label class="col-sm-3">
+            <input type="checkbox" name="marital_status" id="mas1" value="never_married" onclick="marStatus()">Never Married
+         </label>
+         <label class="col-sm-2">
+            <input type="checkbox" name="marital_status" id="mas2" value="widowed" onclick="marStatus()">Widowed
+         </label>
+		 <label class="col-sm-2">
+            <input type="checkbox" name="marital_status" id="mas3" value="divorced" onclick="marStatus()">Divorced
+         </label>
+		 <label class="col-sm-3">
+            <input type="checkbox" name="marital_status" id="mas4" value="awaiting_divorce" onclick="marStatus()">Awaiting Divorce
+         </label>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="phs">Physical Status:</label>
+	  <div class="col-sm-9">
+         <label class="radio-inline">
+            <input type="radio" name="physical_status" id="phs1" value="normal">Normal
+         </label>
+         <label class="radio-inline">
+            <input type="radio" name="physical_status" id="phs2" value="physically_challenged">Physically Challenged
+         </label>
+		 <label class="radio-inline">
+            <input type="radio" name="physical_status" id="phs3" value="doesn't_matter">Doesn't Matter
+         </label>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="ehs">Eating Habits:</label>
+	  <div class="col-sm-9">
+         <label class="radio-inline">
+            <input type="radio" name="eating_habits" id="ehs" value="vegetarian">Vegetarian
+         </label>
+         <label class="radio-inline">
+            <input type="radio" name="eating_habits" id="ehs1" value="non-vegetarian">Non-vegetarian
+         </label>
+		 <label class="radio-inline">
+            <input type="radio" name="eating_habits" id="ehs2" value="eggetarian">Eggetarian
+         </label>
+		 <label class="radio-inline">
+            <input type="radio" name="eating_habits" id="ehs3" value="doesn't_matter">Doesn't Matter
+         </label>
+	  </div>
+	</div>
+	<hr>
+	<div class="input-group">
+	   <span class="input-group-addon" id="rel"><i class="glyphicon glyphicon-list-alt"></i></span>
+	   <h4>&nbsp;Religion preferences:</h4> 
+	</div>
+	<hr>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="preligion">Religion:</label>
+	  <div class="col-sm-9">
+      <select name="religion" class="form-control" id="preligion">
+        <option value="0">Select Religion</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="pmtounge">Mother Tongue:</label>
+	  <div class="col-sm-9">
+      <select name="partner_mother_tounge" class="form-control" id="pmtounge">
+        <option value="0">Select Mother Tongue</option>
+        <option value="1">Assamese</option>
+		<option value="2">Bengali</option>
+		<option value="3">English</option>
+		<option value="4">Gujarati</option>
+		<option value="5">Hindi</option>
+		<option value="6">Kannada</option>
+		<option value="7">Konkani</option>
+		<option value="8">Malayalam</option>
+		<option value="9">Marathi</option>
+		<option value="10">Marwari</option>
+		<option value="11">Oriya</option>
+		<option value="12">Punjabi</option>
+		<option value="13">Sindhi</option>
+		<option value="14">Tamil</option>
+		<option value="15">Telugu</option>
+		<option value="16">Urdu</option>
+		<option value="17">Angika</option>
+		<option value="18">Arunachali</option>
+		<option value="19">Awadhi</option>
+		<option value="20">Bhojpuri</option>
+		<option value="21">Brij</option>
+		<option value="22">Bihari</option>
+		<option value="23">Badaga</option>
+		<option value="24">Chatisgarhi</option>
+		<option value="25">Dogri</option>
+		<option value="26">French</option>
+		<option value="27">Garhwali</option>
+		<option value="28">Garo</option>
+		<option value="29">Haryanvi</option>
+		<option value="30">Himachali/Pahari</option>
+		<option value="31">Kanauji</option>
+		<option value="32">Kashmiri</option>
+		<option value="33">Khandesi</option>
+		<option value="34">Khasi</option>
+		<option value="35">Koshali</option>
+		<option value="36">Kumaoni</option>
+		<option value="37">Kutchi</option>
+		<option value="38">Lepcha</option>
+		<option value="39">Ladacki</option>
+		<option value="40">Magahi</option>
+		<option value="41">Maithili</option>
+		<option value="42">Manipuri</option>
+		<option value="43">Miji</option>
+		<option value="44">Mizo</option>
+		<option value="45">Monpa</option>
+		<option value="46">Nicobarese</option>
+		<option value="47">Nepali</option>
+		<option value="48">Rajasthani</option>
+		<option value="49">Sanskrit</option>
+		<option value="50">Santhali</option>
+		<option value="51">Sourashtra</option>
+		<option value="52">Tripuri</option>
+		<option value="53">Tulu</option>
+      </select>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="pcaste">Caste:</label>
+	  <div class="col-sm-9">
+      <select name="partner_caste" class="form-control" id="pcaste">       
+		 <option value="0"> Select Caste</option>
+		 <option value="1">Achirapakkam Chettiar</option>
+		 <option value="2">Adi Andhra</option>
+		 <option value="3">Agamudayar / Arcot / Thuluva Vellala</option>
+		 <option value="4">Agaram Vellan Chettiar</option>
+		 <option value="5">Agnikula Kshatriya</option>
+		 <option value="6">Ahirwar</option>
+		 <option value="7">Aramari / Gabit</option>
+		 <option value="8">Arekatica</option>
+		 <option value="9">Arya Vysya</option>
+		 <option value="10">Ayira Vysya</option>
+		 <option value="11">Ayyaraka</option>
+		 <option value="12">Bairwa</option>
+		 <option value="13">Balai</option>
+		 <option value="14">Balija</option>
+		 <option value="15">Balija Naidu</option>
+		 <option value="16">Balija Reddy</option>
+		 <option value="17">Beri Chettiar</option>
+		 <option value="18">Besta</option>
+		 <option value="19">Bhatraju</option>
+		 <option value="20">Brahmin - Anaviln Desai</option>
+		 <option value="21">Brahmin - Baidhiki/Vaidhiki</option>
+		 <option value="22">Brahmin - Bardai</option>
+		 <option value="23">Brahmin - Bhargav</option>
+		 <option value="24">Brahmin - Dravida</option>
+		 <option value="25">Brahmin - Khadayata</option>
+		 <option value="26">Brahmin - Khedaval</option>
+		 <option value="27">Brahmin - Koteshwara / Kota (Madhwa )</option>
+		 <option value="28">Brahmin - Madhwa</option>
+		 <option value="29">Brahmin - Mevada</option>
+		 <option value="30">Brahmin - Niyogi</option>
+		 <option value="31">Brahmin - Others</option>
+		 <option value="32">Brahmin - Rajgor</option>
+		 <option value="33">Brahmin - Rarhi/Radhi</option>
+		 <option value="34">Brahmin - Sarua</option>
+		 <option value="35">Brahmin - Shivalli (Madhva)</option>
+		 <option value="36">Brahmin - Shri Gaud</option>
+		 <option value="37">Brahmin - Shri Mali</option>
+		 <option value="38">Brahmin - Shukla Yajurvedi</option>
+		 <option value="39">Brahmin - Smartha</option>
+		 <option value="40">Brahmin - Sri Vaishnava</option>
+		 <option value="41">Brahmin - Tapodhan</option>
+		 <option value="42">Brahmin - Vaidiki</option>
+		 <option value="43">Brahmin - Vaikhanasa</option>
+		 <option value="44">Brahmin - Valam</option>
+		 <option value="45">Brahmin - Velanadu</option>
+		 <option value="46">Brahmin - Zalora</option>
+		 <option value="47">Chattada Sri Vaishnava</option>
+		 <option value="48">Chettiar</option>
+		 <option value="49">Chippolu (Mera)</option>
+		 <option value="50">Darji</option>
+		 <option value="51">Deshmukh</option>
+		 <option value="52">Devanga</option>
+		 <option value="53">Devanga Chettiar</option>
+		 <option value="54">Dhanak</option>
+		 <option value="55">Dommala</option>
+		 <option value="56">Dravida  Brahmin</option>
+		 <option value="57">Ediga /Goud (Balija)</option>
+		 <option value="58">Elur Chetty</option>
+		 <option value="59">Gajula / Kavarai</option>
+		 <option value="60">Gandla</option>
+		 <option value="61">Gandla / Ganiga</option>
+		 <option value="62">Gavara</option>
+		 <option value="63">Goud</option>
+		 <option value="64">Gowda</option>
+		 <option value="65">Gowda - Kuruba Gowda</option>
+		 <option value="66">Intercaste</option>
+		 <option value="67">Isai Vellalar</option>
+		 <option value="68">Jaalari</option>
+		 <option value="69">Jandra</option>
+		 <option value="70">Jangam</option>
+		 <option value="71">Jetty/Malla</option>
+		 <option value="72">Jhadav</option>
+		 <option value="73">Julaha</option>
+		 <option value="74">Kachara</option>
+		 <option value="75">Kaikaala</option>
+		 <option value="76">Kalinga</option>
+		 <option value="77">Kalinga Vysya</option>
+		 <option value="78">Kamma</option>
+		 <option value="79">Kamma Naidu</option>
+		 <option value="80">Kanakkan Padanna</option>
+		 <option value="81">Kandara</option>
+		 <option value="82">Kapu</option>
+		 <option value="83">Kapu Naidu</option>
+		 <option value="84">Kapu Reddy</option>
+		 <option value="85">Karakala Bhakthula</option>
+		 <option value="86">Karni Bhakthula</option>
+		 <option value="87">Kasukara</option>
+		 <option value="88">Kavara</option>
+		 <option value="89">Kerala Mudali</option>
+		 <option value="90">Khatik</option>
+		 <option value="91">Kongu Chettiar</option>
+		 <option value="92">Kongu Nadar</option>
+		 <option value="93">Kori/Koli</option>
+		 <option value="94">Kshatriya</option>
+		 <option value="95">Kshatriya Raju</option>
+		 <option value="96">Kumaoni Rajput</option>
+		 <option value="97">Kummari</option>
+		 <option value="98">Kunbi Lonari</option>
+		 <option value="99">Kunbi Maratha</option>
+		 <option value="100">Kunbi Tirale</option>
+		 <option value="101">Kurni</option>
+		 <option value="102">Kuruba</option>
+		 <option value="103">Kuruhini Chetty</option>
+		 <option value="104">Kuruva</option>
+		 <option value="105">Linga Balija</option>
+		 <option value="106">Lingayath</option>
+		 <option value="107">Madhwa  Brahmin</option>
+		 <option value="108">Madiga</option>
+		 <option value="109">Mahendra</option>
+		 <option value="110">Mair Rajput Swarnkar</option>
+		 <option value="111">Mala</option>
+		 <option value="112">Malwani</option>
+		 <option value="113">Manjapudur Chettiar</option>
+		 <option value="114">Mannan / Velan / Vannan</option>
+		 <option value="115">Maratha</option>
+		 <option value="116">Maratha Kshatriya</option>
+		 <option value="117">Meghwal</option>
+		 <option value="118">Mera</option>
+		 <option value="119">Meru Darji</option>
+		 <option value="120">Modikarlu</option>
+		 <option value="121">Mudaliyar</option>
+		 <option value="122">Mudiraj</option>
+		 <option value="123">Munnuru Kapu</option>
+		 <option value="124">Musukama</option>
+		 <option value="125">Naagavamsam</option>
+		 <option value="126">Nadar</option>
+		 <option value="127">Nagaralu</option>
+		 <option value="128">Nai</option>
+		 <option value="129">Naidu</option>
+		 <option value="130">Naika</option>
+		 <option value="131">Namdarlu</option>
+		 <option value="132">Nattukottai Chettiar</option>
+		 <option value="133">Neeli</option>
+		 <option value="134">Neeli Saali</option>
+		 <option value="135">Nessi</option>
+		 <option value="136">Niyogi  Brahmin</option>
+		 <option value="137">Ontari</option>
+		 <option value="138">Padmasali</option>
+		 <option value="139">Padmashali</option>
+		 <option value="140">Pagadala</option>
+		 <option value="141">Pallan / Devandra Kula Vellalan</option>
+		 <option value="142">Panan</option>
+		 <option value="143">Pannirandam Chettiar</option>
+		 <option value="144">Paravan / Bharatar</option>
+		 <option value="145">Parit</option>
+		 <option value="146">Partraj</option>
+		 <option value="147">Parvatha Rajakulam</option>
+		 <option value="148">Paswan / Dusadh</option>
+		 <option value="149">Patil</option>
+		 <option value="150">Patnaick/Sistakaranam</option>
+		 <option value="151">Pattinavar</option>
+		 <option value="152">Pattusali</option>
+		 <option value="153">Perika</option>
+		 <option value="154">Poosala</option>
+		 <option value="155">Poundra</option>
+		 <option value="156">Pulaya /  Cheruman</option>
+		 <option value="157">Rajaka</option>
+		 <option value="158">Rajput</option>
+		 <option value="159">Reddy</option>
+		 <option value="160">Relli</option>
+		 <option value="161">Rohit / Chamar</option>
+		 <option value="162">SC</option>
+		 <option value="163">ST</option>
+		 <option value="164">Sadhu Chetty</option>
+		 <option value="165">Sagara (Uppara)</option>
+		 <option value="166">Saiva Pillai Tirunelveli</option>
+		 <option value="167">Samagar</option>
+		 <option value="168">Sambava</option>
+		 <option value="169">Satnami</option>
+		 <option value="170">Savji</option>
+		 <option value="171">Sengunthar/Kaikolar</option>
+		 <option value="172">Settibalija</option>
+		 <option value="173">Setty Balija</option>
+		 <option value="174">Shettigar</option>
+		 <option value="175">Shilpkar</option>
+		 <option value="176">Smartha  Brahmin</option>
+		 <option value="177">Sonkar</option>
+		 <option value="178">Sozhia Chetty</option>
+		 <option value="179">Sri  Vaishnava</option>
+		 <option value="180">Srisayana</option>
+		 <option value="181">Sugali (Naika)</option>
+		 <option value="182">Surya Balija</option>
+		 <option value="183">Telaga</option>
+		 <option value="184">Telugupatti</option>
+		 <option value="185">Thandan</option>
+		 <option value="186">Thogata Veerakshathriya</option>
+		 <option value="187">Thondai Mandala Vellalar</option>
+		 <option value="188">Thota</option>
+		 <option value="189">Togata</option>
+		 <option value="190">Turupu Kapu</option>
+		 <option value="191">Vada Balija</option>
+		 <option value="192">Vadambar</option>
+		 <option value="193">Vaddera</option>
+		 <option value="194">Vadugan</option>
+		 <option value="195">Vaidiki  Brahmin</option>
+		 <option value="196">Vaikhanasa  Brahmin</option>
+		 <option value="197">Vaishnava</option>
+		 <option value="198">Valmiki</option>
+		 <option value="199">Vani</option>
+		 <option value="200">Vaniya Chettiar</option>
+		 <option value="201">Vanjara</option>
+		 <option value="202">Veerakodi Vellala</option>
+		 <option value="203">Velama</option>
+		 <option value="204">Velanadu  Brahmin</option>
+		 <option value="205">Vellan Chettiars</option>
+		 <option value="206">Viswabrahmin</option>
+		 <option value="207">Vokkaliga</option>
+		 <option value="208">Yadav</option>
+		 <option value="209">Yadava Naidu</option>
+		 <option value="210">Yellapu</option>
+		 <option value="211">Other caste</option>		
+      </select>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="pscaste">Sub Caste:</label>
+	  <div class="col-sm-9">
+      <select name="partner_sub_caste" class="form-control" id="pscaste">
+        <option value="0">Select Sub-caste</option>
+        <option value="1">Assamese</option>
+		<option value="2">Bengali</option>
+		<option value="3">English</option>
+		<option value="4">Gujarati</option>
+		<option value="5">Hindi</option>
+		<option value="6">Kannada</option>
+		<option value="7">Konkani</option>
+		<option value="8">Malayalam</option>
+		<option value="9">Marathi</option>
+		<option value="10">Marwari</option>
+		<option value="11">Oriya</option>
+		<option value="12">Punjabi</option>
+		<option value="13">Sindhi</option>
+		<option value="14">Tamil</option>
+		<option value="15">Telugu</option>
+		<option value="16">Urdu</option>
+		<option value="17">Angika</option>
+		<option value="18">Arunachali</option>
+		<option value="19">Awadhi</option>
+		<option value="20">Bhojpuri</option>
+		<option value="21">Brij</option>
+		<option value="22">Bihari</option>
+		<option value="23">Badaga</option>
+		<option value="24">Chatisgarhi</option>
+		<option value="25">Dogri</option>
+		<option value="26">French</option>
+		<option value="27">Garhwali</option>
+		<option value="28">Garo</option>
+		<option value="29">Haryanvi</option>
+		<option value="30">Himachali/Pahari</option>
+		<option value="31">Kanauji</option>
+		<option value="32">Kashmiri</option>
+		<option value="33">Khandesi</option>
+		<option value="34">Khasi</option>
+		<option value="35">Koshali</option>
+		<option value="36">Kumaoni</option>
+		<option value="37">Kutchi</option>
+		<option value="38">Lepcha</option>
+		<option value="39">Ladacki</option>
+		<option value="40">Magahi</option>
+		<option value="41">Maithili</option>
+		<option value="42">Manipuri</option>
+		<option value="43">Miji</option>
+		<option value="44">Mizo</option>
+		<option value="45">Monpa</option>
+		<option value="46">Nicobarese</option>
+		<option value="47">Nepali</option>
+		<option value="48">Rajasthani</option>
+		<option value="49">Sanskrit</option>
+		<option value="50">Santhali</option>
+		<option value="51">Sourashtra</option>
+		<option value="52">Tripuri</option>
+		<option value="53">Tulu</option>
+      </select>
+	  </div>
+	</div>	
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="pstar">Star:</label>
+	  <div class="col-sm-9">
+      <select name="partner_star" class="form-control" id="pstar">
+        <option value="0">Select Star</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="manglik">Manglik:</label>
+	  <div class="col-sm-9">
+         <label class="radio-inline">
+            <input type="radio" name="manglik" id="manglik1" value="yes">Yes
+         </label>
+         <label class="radio-inline">
+            <input type="radio" name="manglik" id="manglik2" value="no">No
+         </label>
+		 <label class="radio-inline">
+            <input type="radio" name="manglik" id="manglik3" value="other">Doesn't Matter
+         </label>
+	  </div>
+	 </div>
+	 <hr>
+	<div class="input-group">
+	   <span class="input-group-addon" id="rel"><i class="glyphicon glyphicon-map-marker"></i></span>
+	   <h4>&nbsp;Location preferences:</h4> 
+	</div>
+	<hr>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="pcountry">Country Living In:</label>
+	  <div class="col-sm-9">
+      <select name="partners_country" class="form-control" id="pcountry">
+        <option value="0">Select Country</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="cship">Citizenship:</label>
+	  <div class="col-sm-9">
+      <select name="citizenship" class="form-control" id="cship">
+        <option value="0">Select Citizenship</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>
+	<hr>
+	<div class="input-group">
+	   <span class="input-group-addon" id="wkl"><i class="glyphicon glyphicon-briefcase"></i></span>
+	   <h4>&nbsp;Profession Preferences:</h4> 
+	</div>
+	<hr>
+	<div class="form-group">
+      <label class="control-label col-sm-3" for="ped">Education:</label>
+	  <div class="col-sm-9">
+      <select name="partner_education" class="form-control" id="ped">
+        <option value="0">Select Education</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="poccupation">Occupation:</label>
+	  <div class="col-sm-9">
+      <select name="partner_occupation" class="form-control" id="poccupation">
+        <option value="0">Select Occupation</option>
+        <option value="1">Hindu</option>
+        <option value="2">Muslim - Shia</option>
+        <option value="3">Muslim - Sunni</option>
+		<option value="4">Muslim - Others</option>
+		<option value="5">Christian</option>
+		<option value="6">Sikh</option>
+		<option value="7">Jain - Digambar</option>
+		<option value="8">Jain - Shwetambar</option>
+		<option value="9">Jain - Others</option>
+		<option value="10">Parsi</option>
+		<option value="11">Buddhist</option>
+		<option value="12">Inter-Religion</option>
+      </select>
+	  </div>
+	</div>	
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="paincome">Anual Income:</label>
+      <div class="col-sm-6">
+           <input type="number" class="form-control" id="paincome" min="0" placeholder="Enter In Rupees" name="partner_anual_income" autocomplete="off">
+      </div>
+	  <div class="tpa"><span>Enter In Rupees</span></div>
+    </div>	
+	<hr>
+	<div class="input-group">
+	   <span class="input-group-addon" id="abt"><i class="glyphicon glyphicon-pencil"></i></span>
+	   <h4>&nbsp;Partner Description:</h4> 
+	</div>
+	<hr>
+	<div class="form-group">
+	<div class="col-sm-offset-3 col-sm-9">
+      <label for="comment">Describe what you are looking for in a partner:</label>
+      <textarea class="form-control" rows="5" id="comment" placeholder="Type atleast 50 words"></textarea>
+	  <span class="col-sm-offset-9 col-sm-4" id="noch"></span>
+    </div>	
+    </div>	
+	<hr>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-3" id="copr">
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-ok">&nbsp;</span>Save &amp; Complete</button>
+      </div>
+	  <div class="col-sm-offset-3 col-sm-3" id="colt">
+        <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-step-forward">&nbsp;</span>I'll Complete Later</button>
+      </div>
+    </div>
+  </form>    
+</div>
+<div class="col-sm-2"></div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Copyright &copy; 2017. All rights reserved.</p>
+</footer> 
+<script src="js/reg.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
